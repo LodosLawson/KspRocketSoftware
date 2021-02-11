@@ -14,12 +14,14 @@ import krpc
 con = krpc.connect()
 ave = con.space_center.active_vessel
 
+#Freezes fuel information as a list
 def getfuel():
     #print("All Fuel:")
     return [[[x.name, x.amount] for x in ave.resources.all],
             [z.name for z in ave.resources.all],
             [z.amount for z in ave.resources.all]]
 
+#freezes orbit informations
 def getorbit():
     #print("All Orbit Property")
     ReOrbit = []
@@ -36,6 +38,7 @@ def getorbit():
         pass
     return ReOrbit
 
+#freezes rocket engine information
 def getengine():
     problem = ['auto_mode_switch','gimbal_limit','gimbal_locked','mode','modes']
     engine_property = []
@@ -60,15 +63,19 @@ def getengine():
             b.append(x)
     return b
 
+#activation functions 
 def activ():
     ave.control.activate_next_stage()
 
+#motor activation and power up
 def onoff(size):
     ave.control.throttle = size
 
+#KSP's Special Autopilot Control Assistant Activation
 def aopil():
     ave.auto_pilot.engage()
 
+#control functions
 def pos(x,y):
     ave.auto_pilot.target_pitch_and_heading(x,y)
 
