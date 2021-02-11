@@ -1,7 +1,14 @@
-#
-#
-#
-#
+#KspRocketSoftware v0.1
+#The code is written and developed by Mehemmed AC
+
+#My Instagram Page : mehemmed_ac
+#My Email : mehemmedac@gmail.com
+#My Web Page : mehemmedac.ga
+#My GitHub : github.com/MehemmedAC
+
+#If you have used and liked it, don't forget to follow.
+#If there is a problem, please do not forget to report it.
+
 import krpc
 import RocketProperty
 import time
